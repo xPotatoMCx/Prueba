@@ -8,7 +8,13 @@
         body, html {
             margin: 0; padding: 0; width: 100%; height: 100%;
             display: flex; justify-content: center; align-items: center;
-            background-color: #f0f2f5; font-family: sans-serif;
+            /* Se añade la imagen de fondo aquí */
+            background-image: url('fondo.jpg'); 
+            background-size: cover; /* Para que la imagen cubra toda la pantalla */
+            background-position: center; /* Para que la imagen esté centrada */
+            background-repeat: no-repeat;
+            background-color: #f0f2f5; /* Color de respaldo por si la imagen no carga */
+            font-family: sans-serif;
             overflow: hidden;
         }
 
@@ -57,22 +63,22 @@
 
         btn.addEventListener('click', () => {
             // 1. Mostrar contenedor
-            container.style.display = 'block';
-            btn.style.display = 'none';
+            container.style.display = 'block';[cite: 2]
+            btn.style.display = 'none';[cite: 2]
 
-            // 2. Intentar Pantalla Completa (Full Screen)
-            if (container.requestFullscreen) {
-                container.requestFullscreen();
-            } else if (container.webkitRequestFullscreen) {
-                container.webkitRequestFullscreen();
+            // 2. Intentar Pantalla Completa (Full Screen)[cite: 2]
+            if (container.requestFullscreen) {[cite: 2]
+                container.requestFullscreen();[cite: 2]
+            } else if (container.webkitRequestFullscreen) {[cite: 2]
+                container.webkitRequestFullscreen();[cite: 2]
             }
 
-            // 3. Reproducir con audio
-            video.volume = 1.0;
-            video.play();
+            // 3. Reproducir con audio[cite: 2]
+            video.volume = 1.0;[cite: 2]
+            video.play();[cite: 2]
 
-            // 4. Truco: Si intenta pausar, se reproduce solo
-            video.onpause = () => video.play();
+            // 4. Truco: Si intenta pausar, se reproduce solo[cite: 2]
+            video.onpause = () => video.play();[cite: 2]
         });
     </script>
 </body>
