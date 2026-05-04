@@ -12,8 +12,10 @@
             height: 100%;
             display: flex; 
             justify-content: center; 
-            align-items: center;
-            background-image: url('fondo.jpg'); 
+            align-items: flex-start; 
+            padding-top: 65vh; 
+            box-sizing: border-box;
+            background-image: url('fondo.png'); 
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat;
@@ -23,7 +25,7 @@
         }
 
         #btn {
-            padding: 80px 40px;
+            padding: 20px 40px;
             font-size: 22px;
             font-weight: bold;
             color: white;
@@ -76,7 +78,6 @@
         const video = document.getElementById('trollVideo');
 
         btn.addEventListener('click', () => {
-            // 1. Mostrar el contenedor del video y ocultar el botón
             container.style.display = 'block';
             btn.style.display = 'none';
 
